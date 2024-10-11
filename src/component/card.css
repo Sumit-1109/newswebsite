@@ -1,0 +1,86 @@
+.cardcontainer {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: #22283E;
+    border-radius: 15px;
+    box-shadow: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-image {
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.cardcontent {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cardtitle {
+    background-color: rgba(24, 27, 34, 0.8);
+    color: #FEC2A0;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    height: 30%;
+}
+
+.cardauthor {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    flex-grow: 1;
+    color: #F2DDCC;
+    margin-bottom: 10px;
+}
+
+.cardlink {
+    text-align: right;
+    color: #1a73e8;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.cardlink:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #232E4E;
+    color: white;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #0D111D;
+}

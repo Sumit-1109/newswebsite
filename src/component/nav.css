@@ -1,0 +1,141 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 10vh;
+    background-color: #0C101C;
+    border-bottom: #F2DDCC 2px solid;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    color: #F2DDCC;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navmenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.navmenu ul li {
+    position: relative;
+}
+
+.navmenu a {
+    color: #F2DDCC;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: -10%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.dropdown li {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown a {
+    color: #0C101C;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #f2f2f2;
+}
+
+.search-bar {
+    display: flex;
+    height: 60%;
+    align-items: center;
+    justify-items: center;
+    background-color: #1a1a2e;
+    border-radius: 30px;
+    padding: 1px 10px;
+    width: 50%;
+    position: absolute;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease, box-shadow 0.3s ease;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-bar.active {
+    width: 85%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar.active .searchinnercontainer {
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+    background-color: #0E131F;
+    border: none;
+    outline: none;
+    color: #fff;
+    flex-grow: 1;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    width: 60%;
+}
+
+.search-bar input::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.search-bar .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+}
+
+.search-bar .arrow i,
+.search-bar .magnifying i {
+    font-size: 20px
+}
+
+.searchcontainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchinnercontainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.searchinnercontainer.qactive {
+    background-color: #0E131F;
+    transition: background-color 0.3s ease;
+}
